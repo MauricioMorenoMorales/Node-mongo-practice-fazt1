@@ -9,9 +9,10 @@ const {
 	updateNote,
 } = require('../controllers/notes.controller')
 
+//New Note
 router.get('/notes/add', renderNoteForm)
 
-router.post('/notes/post', createNewNote)
+router.post('/notes/new-note', createNewNote)
 
 //Get all notes
 router.get('/notes', renderNotes)
