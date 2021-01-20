@@ -3,10 +3,10 @@ const { Schema, model } = require('mongoose')
 const noteSchema = new Schema(
 	{
 		title: {
-			type: string,
+			type: String,
 		},
 		description: {
-			type: string,
+			type: String,
 		},
 	},
 	{ timestamps: true },

@@ -22,6 +22,7 @@ app.set('view engine', '.hbs') //! Aqui ya se inicializa
 
 //Middlewares
 app.use(morgan('dev'))
+app.use(express.static(__dirname + './public'))
 app.use(express.urlencoded({ extended: false }))
 
 //Global variables
