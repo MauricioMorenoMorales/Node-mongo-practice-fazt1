@@ -2,6 +2,7 @@ const express = require('express')
 const exphbs = require('express-handlebars') //! Requiere en el servidor la función exphbs
 const path = require('path')
 const morgan = require('morgan')
+const methodOverride = require('method-override')
 
 //Inicializaciones
 const app = express()
@@ -24,6 +25,7 @@ app.set('view engine', '.hbs') //! Aqui ya se inicializa
 app.use(morgan('dev'))
 app.use(express.static(__dirname + './public'))
 app.use(express.urlencoded({ extended: false }))
+app.use(methodOverride('_method'))
 
 //Global variables
 
